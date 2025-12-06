@@ -1,0 +1,10 @@
+/stuff/
+/base.jsonl
+/db9.sqlite
+/maths_db.sqlite
+/orange_db.sqlite
+/output.jsonl
+/.venv/
+/.idea/
+__pycache__/
+/database/

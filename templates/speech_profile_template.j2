@@ -1,0 +1,11 @@
+Overall manner of speaking: {{ speech_profile.description }}
+Emotional state when speaking: {{ speech_profile.emotional_description }}
+
+Examples of their speech (not to be copied but used as a guide)
+---start of speech samples----
+{%  for sample in speech_profile.samples %}
+- example speech: {{ sample.example }}
+  tone during example: {{ sample.tone }}
+  situation: {{ sample.situation }}
+  feeling felt while speaking: {{ sample.feeling }}{% endfor %}
+----end of speech samples----

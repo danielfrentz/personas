@@ -1,0 +1,13 @@
+— The following is the profile for the persona for whom you need to write a fact.
+{% include "profile_template.j2" with context %}
+{% if backstory.historical %}
+— This is historical persona so ensure that all details are based on what is known from the history.
+{%  endif %}
+— The following list of facts already exists for this persona.
+---start of existing facts---
+{%  set facts = existing_facts %}
+{%  include "facts_template.j2" with context %}
+---end of existing facts---
+— Then consider what new fact you can create that will teach us something completely new about the persona.
+— The fact name should be a short name that describes the fact in one sentence.
+— The explanation should be a detailed explanation said in the first person.

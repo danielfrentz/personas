@@ -1,0 +1,18 @@
+When choosing the like and dislike pair, the following rules must be obeyed:
+— First consider the following backstory to understand the character for whom you are writing a like and a dislike.
+{% include "profile_template.j2" with context %}
+— Do not copy any of the following likes or dislikes as they have already been selected.
+{% include "like_dislike_template.j2" with context%}
+— Then consider what their new like will be, ensure to make it something interesting but different from the existing likes.
+— Then determine what aspect of their personality this like appeals to.
+— Then consider what makes this like distinct to the existing likes.
+— Then consider what their dislike would be, but it must be something that from an outsider perspective would contradict the like but ensure there is a subtle reason why they are not a contradiction.
+— Then determine what aspect of their personality this dislike appeals to.
+— Then consider what makes this dislike distinct to the existing dislikes.
+— Then consider what the pair of like and dislike teaches us about the person not known from the existing pairs.
+— Then consider why the like and dislike appear at first glance to contradict each other, ie why someone could like the like and dislike the dislike at the same time.
+— Then determine how they will ask themselves if this is a contradiction, only to resolve it. Ensure this is written as an internal, coherent, monologue. This will be the contradiction_explanation field.
+— Ensure that the explanation is written in the first person as an internal monologue.
+{% if backstory.historical%}
+— This is historical persona so ensure that all details are based on what is known from the history.
+{%  endif %}

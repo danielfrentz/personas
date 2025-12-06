@@ -1,0 +1,37 @@
+— First, consider the following conversation plan as this must be followed. You are to write the conversation while the plan merely tells you how to structure the conversation:
+{% for step in monologue_plan.conversation_steps %}
+{{ step }}
+{% endfor %}
+— for each step in the plan, there should be at least one conversation turn.
+— Then consider the person who is responding and how they would speak. The list of people responding are: {{ speakers | map(attribute='name') | list }}.
+— The following are the speech profiles for each of the speakers:
+{% for speaker in speakers %}
+{{speaker.backstory.name}}
+{% set speech_profile = speaker.speech_profile %}
+{% include "speech_profile_template.j2" with context %}
+{% endfor %}
+— Never copy the speech samples directly from the speech profiles, use these as guides only.
+— Ensure that the speaker name is the full name of the speaker as shown in their profile.
+— Ensure that the conversation uses as many turns as it needs to be clear but not verbose. Every turn must have a specific goal, and there are no limits on how long it can be.
+— Ensure that the conversation is in the correct order.
+— Ensure that all maths is written in LaTeX and enclosed in $ and $
+— Ensure that the turn intent reflects what the purpose of this turn is in the structure of the conversation, it should guide the conversation from start to finish.
+— Ensure that the action reflects what actions the person is performing as they speak and not what they are thinking as if they could be seen.
+— Ensure that private thought influences what they say, but it can be different to what they say as it should reflect what they are thinking.
+— Ensure that the only people speaking are the people in the following list {{ speakers | map(attribute='name') | list }}.
+— Ensure that the person who asked is not involved in the response and that no followup questions are asked.
+— Ensure that no one is named in the conversation, no names should appear. When necessary, use pronouns.
+— The speakers must always be named as one of the following:
+{% for speaker in speakers %}
+{{speaker.backstory.name}}
+{%  endfor %}
+This applies to the directed at and speaker fields.
+— Ensure that the deliverable field is filled with the actual deliverable of the specified task.
+{% if custom_instructions is not none %}
+{% for custom_instruction in custom_instructions %}
+{{ custom_instruction }}
+{% endfor %}
+{% endif %}
+— Ensure to always use full names including first and last names if known.
+— Ensure that no one is greeted etc., and recall this is a private 1–1 conversation.
+— Ensure that there are a minimum of {{ minimum_steps }} turns in the conversation.

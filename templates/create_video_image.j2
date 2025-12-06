@@ -1,0 +1,6 @@
+Consider the following conversation:
+{% for turn in conversation.turns %}
+    speaker: {{ turn.speaker }}: {{ turn.text }}
+{% endfor %}
+Consider if this were a video and then write a detailed description of the first frame for the video such that it could be used to create an image in a diffusion model.
+Then consider the conversation itself and write a detailed description of the scene for an image → video model to generate the conversation as a video.

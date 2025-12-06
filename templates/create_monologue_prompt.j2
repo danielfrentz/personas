@@ -1,0 +1,33 @@
+— First consider the following theme of the prompt not only to restrict the domain but to understand any specific requirements.
+{{ theme }}
+— Then consider if the theme is asking for an educational response or simply asking for a problem to be solved.
+— Then look at the following profile to see what they would be interested in asking and how they would ask it.
+{%  include "profile_template.j2" with context %}
+— Then ensure that the prompt is not similar to any of the following:
+{%  for prompt in previous_prompts %}
+{{ prompt }}
+{%  endfor %}
+— Ensure the prompt sounds natural and is directed at the person being asked.
+{%  if prompt_type == 'lecture' %}
+— Ensure to phrase the prompt as an inquiry in which the person wants a small lecture. i.e. "can you explain _topic_?" indicating how indepth it should be.
+{% elif prompt_type == 'problem' %}
+— Use the theme to come up with a specific problem to be solved. It must not be openly ended or too broad but rather with defined constraints.
+— Ensure that the problem has only one possible solution.
+— Ensure that the problem is not only different to the previously mentioned ones, but also adds new problem solving techniques, ie it must be very different to the others.
+— Ensure to Phrase the prompt as a task to solve a specific problem, i.e. "solve _problem statement_". and ensure the problem statement is clear and not vague.
+{% endif %}
+{%  if context %}
+— Consider the following context and ensure the question is about something in the context and can be answered with the context:
+{{ context }}
+{%  endif %}
+— Ensure that the prompt is short and direct. It must ask one and only one prompt.
+— Ensure that the prompt is not open-ended but rather is quite specific.
+— Do not name anyone, only the prompt is needed.
+— Ensure that the prompt sounds natural as if asked by a real person.
+{% if custom_instructions is not none %}
+{% for custom_instruction in custom_instructions %}
+- {{ custom_instruction }}
+{% endfor %}
+{% endif %}
+
+Finally create your prompt using the rules stated above.

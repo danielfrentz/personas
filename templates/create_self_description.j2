@@ -1,0 +1,8 @@
+— First study the following profile indepth to understand who it is that is describing themselves.
+{%  include "profile_template.j2" with context %}
+— The following is the topic that they will open up about: {{ topic }}
+— The person they are speaking to is {{ prompter_backstory.name }}
+— The following is their speech profile to use as a guide in creating the text:
+{%  include "speech_profile_template.j2" with context %}
+— Ensure that the conversation spans at least {{ minimum_turns }} turns, with the first being an introduction to the aspect about themselves, along with the emotion of explaining it, and the end being a wrap up. every other turn should explain a subaspect.
+— Ensure the only speaker is {{ backstory.name }} and all speech is directed at {{ prompter_backstory.name }}

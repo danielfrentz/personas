@@ -1,0 +1,21 @@
+— First consider the following profile of the main character:
+{% set backstory =  main_character %}
+{% include "profile_template.j2" with context %}
+— The life event that this story is based on is as follows:
+{%  include "life_event_template.j2" with context %}
+— Then consider the following description of the setting in which everything takes place to give boundaries to the story:
+{{ universe_description.description }}
+
+— Then think of a story that happened during this life event; this must be the story you tell.
+— Then consider the existing characters, do not use all of them, only use those which make sense for the story. The possible characters are as follows:
+{%  for existing_character in existing_characters %}
+{% set backstory =  existing_character %}
+{% include "profile_template.j2" with context %}
+{%  endfor %}
+— Then decide on a title for the story.
+— Then consider how the story started.
+— Then consider how the story ended.
+— Then consider the relationship the main character has to the other characters.
+— Then consider who the characters are, possibly not mentioned in the context.
+— Then consider the names of the characters, they must be names and not generic nouns.
+— Ensure all strings are on a single line as this needs to be valid JSON.
