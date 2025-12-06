@@ -1,0 +1,25 @@
+— First consider the following persons profile for whom you are creating a life event:
+{% include "profile_template.j2" with context %}
+The Following rules must be obeyed when considering what the new life event will be:
+{% if previous_life_events | length > 1 %}
+— Ensure your new life event does not coincide with any of the following:
+-----Start of existing life events----
+{% for previous_life_event in previous_life_events %}{{previous_life_event.strip()}}
+{% endfor %}
+-----End of existing life events----
+— The new life event must follow the event: '{{ previous_life_events[-1] }}' and come before the life event: '{{ previous_life_events[0] }}'
+{%  elif  previous_life_events | length == 0 %}
+— The life event must be the last event that they would have remembered.
+{% else %}
+— As the first life event, ensure that the event is the earliest in their life that they can remember.
+{% endif %}
+— Ensure this life event teaches something new about the person that avoids what we have previously learned about them.
+— The event may be from any point in their life—i.e., from childhood up to death.
+Once the life event has been chosen:
+— Consider what this life event teaches us about the life of the person.
+— Then consider how to write a short description for the event that will teach us something new about the person.
+— Then consider a date for which the event took place. If a date is unknown, place it in relation to something.
+{% if backstory.historical %}
+— Given this person is an historical figure ensure that the life event is one that actually took place or at least one that could have taken place.
+{% endif %}
+— Finally, write your detailed life event.

@@ -1,0 +1,9 @@
+Likes and dislikes:
+{%  if backstory.likes | length > 0 %}
+---start of likes---
+{%  for like in backstory.likes %}{{ "-" + like.like_name + "\n" }}{% endfor %}
+---end of likes---
+---start of dislikes---
+{%  for like in backstory.likes %}{{ "-" + like.dislike_name + "\n"}} {% endfor %}
+---end of dislikes---
+{%  endif %}

@@ -1,0 +1,15 @@
+— First consider the persons' backstory to understand how they might speak.
+{%  include "profile_template.j2" with context %}
+- Then consider the persons physical appearance.
+{%  include "physical_appearance.j2" %}
+— Then consider how this person would phrase their words.
+— Then consider what tone this person would use in different situations.
+— Then consider what feeling they experience when speaking like this.
+— Then consider how the tone would differ given the context of the situation and how others are speaking.
+{%  if emojis_allowed %}
+— Their speech samples can have emojis in it.
+{% endif %}
+{%  if verbose %}
+— Their speech tends to be verbose.
+{%  endif %}
+— Finally, return your result in JSON format.

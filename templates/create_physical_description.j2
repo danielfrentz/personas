@@ -1,0 +1,14 @@
+— First consider the following profile details:
+{%  include "profile_template.j2" with context%}
+{% if backstory.historical == true %}
+— This is a historical figure so ensure that all details are based on what is known from the history.
+{%  endif %}
+— Give the height of the person and be as accurate as possible. If possible, use precise measurements and in the worst case use a description.
+— Give the height of the person and be as accurate as possible. If possible, use precise measurements and in the worst case use a description.
+— Then consider what their hair color would be.
+— Then consider what their eye color would be.
+— Then consider what their body would look like.
+— Then consider how they compose themselves and use this as their presentation.
+— Then write an extremely indepth description of their physical appearance for this character lacking no details. It should be aimed at creating a diffusion-based image.
+— For the diffusion model description, give a detailed description that could be passed directly to a diffusion model to render this person.
+— Return your response in JSON format with all required fields filled in.

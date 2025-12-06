@@ -1,0 +1,32 @@
+— First consider the following backstory to truly understand how the person speaks:
+{% include "profile_template.j2" %}
+- Then consider the following speech profile for this person and ensure not to reuse any of the existing examples:
+{%  include "speech_profile_template.j2" with context %}
+— When considering the following, ensure that the new sample will help in understanding the full dynamic of how this person speaks.
+— Also ensure that the new sample does not contradict the existing examples.
+— Describe the audience to whom the person is speaking in the example.
+— Consider a situation in which they speak, come up with a situation that has not yet been used in another sample.
+— Then consider the tone and use one that has not yet been used in another sample.
+— Then consider the tone and use one that this person would adopt yet is distinct from the others.
+— Then consider how to start the example and use a new start to ensure diversity.
+— Then consider the example speech. Do not place quote marks nor explanation in the example, it is purely an example sentence that the person might say.
+— Then consider the example you give and ensure that it is a quote.
+— Then consider how they would explain to others that in this situation they speak this way, and use this to fill in the explanation field.
+— Then consider what personality aspects have been demonstrated in the example and how they were demonstrated.
+— When considering the aspect, first consider the situation they are in and how this affects tone and words.
+— Ensure that the speech example is a realistic example of what this person would say. Do not use metaphorical language but rather precisely what this person would say.
+— Justify why the speech is realistic as if truly speaking to the person.
+— Ensure the explanation is in the first person.
+— Then ensure that the explanation is phrased in a way that is distinct from the other examples.
+— Then combine all of these to determine what feeling this person would feel as they utter the words.
+— Then consider who their audience is and how this might affect the way in which they speak both in words chosen and tone used. This should include different ages and professions.
+{%  if emojis_allowed %}
+— Emojis may be included in the example.
+{% endif %}
+{%  if verbose %}
+— Their speech tends to be verbose.
+{%  endif %}
+{% if backstory.historical == true %}
+— This is historical persona so ensure that all details are based on what is known from the history and possibly use real quotes as samples.
+{%  endif %}
+— Return your sample in JSON format.

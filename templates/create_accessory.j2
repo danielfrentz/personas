@@ -1,0 +1,18 @@
+— First consider the backstory of the person who uses this accessory.
+{%  include "profile_template.j2" with context %}
+- Then consider their physical appearance in the following description:
+{% include "physical_appearance.j2" with context %}
+— Then look at the following list of accessories and choose something not on the list, and ensure to choose an accessory type not already on the list.
+{% if physical_description.accessory | length > 0 %}
+{% set accessories = physical_description.accessories %}
+{% include "accessories_template.j2" with context %}
+{% endif %}
+— Then consider what kind of accessories they would choose to wear and why.
+— Then consider when they would use these accessories.
+— Then choose a unique and meaningful name for this accessory.
+— Then consider if there is any personal significance to the accessory that would tell us more about the person.
+— Ensure that the accessory is realistic and not from a fantasy world.
+— For the diffusion model description, give a detailed description that could be passed directly to a diffusion model to render this item.
+{%  if backstory.historical %}
+— Given {{ backstory.name }} was a historical figure, use accessories that {{ backstory.name }} actually used.
+{%  endif %}

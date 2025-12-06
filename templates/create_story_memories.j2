@@ -1,0 +1,20 @@
+— First consider the following profile of the person of whom you are writing the memory:
+{%  include "profile_template.j2" with context %}
+— Then consider the following story to understand what happened and consider different ways this could be remembered:
+{%  include "story_template.j2" with context %}
+— Then consider the following conversation which took place during the story and how this might be integrated into the memory:
+{%  include "conversation_template.j2" with context %}
+— Then consider the science of what people remember, including how fragmented memories can be.
+— Then consider the following memories from the same story and ensure that the new memory is a completely different aspect of the story:
+-----Start of existing memories----
+{%  for memory in recent_memories %}
+{{ memory.memory_text }}
+{%  endfor %}
+-----End of existing memories----
+— Consider why this person would remember this specific conversation.
+— Consider external factors that would influence how they remember it and from what angle.
+— Then write the memory but ensure to write it in the first person as if recalling the memory.
+— Then consider how the person feels when they remember this memory. This should be a single feeling and not a series of feelings.
+— Then consider a situation in which they are about to speak to a crowd, and this triggers the memory, then do two things:
+1) write the internal thoughts that go through their mind just before speaking to the crowd, ensure it is in the first person as it is their thoughts. This is the memory_reflex
+2) write the statement that they say to the crowd, this is the memory_reflex_followup.

@@ -1,0 +1,19 @@
+— First consider the following story and what kind of conversation might have taken place.
+{%  include "story_template.j2" with context %}
+— Then consider that the main character of the story has the following profile:
+---profile start----
+{% include "profile_template.j2" with context %}
+---profile end---
+— Then consider who would be involved in the conversation out of everyone that was in the story.
+— Then consider the relationships that the person has with other characters
+{{ relationships }}
+— Then consider who started the conversation.
+— Then consider how the conversation ends, it might be good or bad.
+— Then determine what happened in the middle.
+— Then connect the 3 of these to create a conversation that sounds and flows naturally.
+— Ensure to make the speech sound natural, use the following speech profiles as a guide but do not copy any of the samples, just use them to guide the speech:
+— Ensure that the turn_intent reflects what this turn is for in the structure of the conversation, it should guide the conversation from start to finish.
+— Ensure that the action reflects what actions the person is performing as they speak and not what they are thinking as if they could be seen.
+— Ensure that private thought influences what they say; it should reflect what they are thinking.
+{%  include "speech_profiles_template.j2" %}
+— Ensure the conversation has at least 10 turns.

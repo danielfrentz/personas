@@ -1,0 +1,6 @@
+Use the following speech profiles to guide the way the conversations are written, but do not copy the examples, rather use them as guides.
+
+{%  for name, speech_profile in speech_profiles %}
+    character - {{ name }}
+    {% include "speech_profile_template.j2" with context %}
+{% endfor %}

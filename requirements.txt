@@ -1,0 +1,14 @@
+pydantic-settings
+sqlalchemy
+pydantic
+fastapi
+pytest
+PyPDF2
+datasets
+ollama
+requests
+uvicorn
+ollama
+ftfy
+text_unidecode
+jinja2

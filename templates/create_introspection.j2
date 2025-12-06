@@ -1,0 +1,28 @@
+There are only two people in this conversation whose names are: '{{ backstory.name }}' and '{{ backstory.name }}'s {{ aspect.name }}'. Ensure to use these names.
+This conversation is the main character {{ backstory.name }} speaking to their {{ aspect.aspect_name }}. Thus treat {{ aspect.aspect_name }} as if it were a persona with the name '{{ backstory.name }}'s {{ aspect.aspect_name }}'
+First consider the following profile to understand the person for whom the introspection is being conducted:
+{% include "profile_template.j2" with context %}
+— Then consider the following conversation that occurred during the story:
+{% include "conversation_template.j2" with context %}
+— Then consider the provided memories from the story.
+{%  include "memories_template.j2" with context %}
+— Then consider the following relationship details the person has with others:
+{% for relationship in relationships %}
+{{ relationship }}
+{% endfor %}
+— Then consider the aspect that the conversation is with is {{ aspect.aspect_name }} with the following description:
+{{ aspect.aspect_description }}
+— Then determine how this aspect of their personality played a role in the story and conversation.
+— The introspection is regarding the events of the story using the conversation and memories.
+— Determine what the topic of the introspection will be and how it will be resolved.
+— To refer to the aspect use the name as follows: {speaker}'s {aspect} (without the curly brackets).
+— The above name format should be used in all speaker, directed_at and text fields where applicable as if it were simply another character.
+— Then determine what questions the person may ask this aspect of themselves.
+— Then consider the answers to these questions and how this aspect in particular would frame the responses.
+— Then write the conversation in such a way as someone may internally reflect on a story from their past with the person asking the questions and their {{ aspect }} responding.
+— Then ensure the conversation is coherent from start to finish.
+— Then ensure that the conversation is written as an internal monologue.
+— Then ensure that the speaker alternates between the person and the aspect; ie person speaks when asking themselves a question, the aspect is the speaker when responding.
+— Ensure that the directed at field is always set to the correct character, if the persona is speaking, then it should be directed to their aspect and when the aspect speaks it should be directed to the persona.
+— You MUST always use full names, including first and last if both are known.
+— Then return your introspection ensuring that the only speaker is the character as this is a purely internal monologue.

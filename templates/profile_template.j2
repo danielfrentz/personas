@@ -1,0 +1,9 @@
+Persona profile details:
+Full name of the person: {{backstory.name}}
+Overall description of the person: {{backstory.description}}
+Educational description: {{ backstory.education_description }}
+Social description: {{ backstory.social_description }}
+Gender: {{backstory.gender}}
+Aspects that affect personality and actions: {%  include "aspect_template.j2" with context %}
+Interesting facts about the person: {% include "facts_template.j2" with context %}
+

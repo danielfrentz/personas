@@ -1,0 +1,57 @@
+— The response is for the following prompt:
+{{ prompt.prompt_text }}
+— Your task is not to write the conversation itself but to design the flow of the response. This means you should not state what each person will say but rather the steps they will take such as, but not limited to, introducing the topic, explaining the topic, explaining subtopics, concluding.
+— The goal of the response should be the following: {{ intent }}.
+{%  if context %}
+— All information should come from {{ context }}
+{% endif %}
+{% if problem_type == 'lecture' %}
+— The response should be a lecture on the provided topic. Ensure that the lecture is clear and concise and does not go off a topic and make it very narrow.
+— If possible, the lecture should cover all necessary definitions in a rigorous manner. Each definition should be 1 step in the plan.
+{% elif problem_type == 'problem' %}
+— Ensure that the goal and only focus of this conversation is to solve the problem that has been presented. If it is unclear, then add clarification as part of the conversation.
+— The response is intended to be solving a specific problem so ensure that it ends with the problem solution being presented.
+— Ensure that the final step in the conversation is the precise solution statement without any reflection.
+{% endif %}
+— The speakers should never introduce themselves as they know the person who asked the question.
+— Then ensure the response is directed at the person who prompted the conversation. ie {{ prompter.backstory.name }} or one of the other speakers, never to an audience.
+— You are to only design the response, which means the only people who can speak are: {{ responders | map(attribute='backstory.name') | list }}.
+— The only people that may be named are those who are in this list: {{ responders | map(attribute='backstory.name') | list }} and {{ prompter.backstory.name }}.
+— The following are the profiles of the people speaking, use this to guide their approach etc.:
+{% for responder in responders %}
+{% set backstory = responder.backstory %}
+{% include "profile_template.j2" with context %}
+{% endfor %}
+— Then consider how the question will be answered, the style the speaker would use, the speech they would use and the tone. The following details should be used to guide this:
+{%  if responders | length > 1 %}
+— Ensure that the speakers are working together not simply taking turns to speak. They may ask each other for opinions, correct each other etc., but never repeat each other. Also ensure that they are not simply taking turns.
+— Use their profiles to determine what their roles should be and what their dynamic will be. In particular, look at the social description.
+— Justify the role that each will take and how they will help each other to deliver the desired result
+{%  if disagreement == True and speakers | length > 1%}
+— Ensure there is a disagreement over the approach to the problem, but a resolution to agree to one of them.
+{% endif %}
+{%  endif %}
+{%  if include_examples == True %}
+— Ensure the speaker includes examples to help explain.
+— Ensure that only one example is given.
+{%  endif %}
+{%  if include_counter_examples == true %}
+— Ensure the speaker includes counter-examples to help explain.
+— Ensure that only one counter example is given.
+{%  endif %}
+{% if custom_instructions is not none %}
+{% for custom_instruction in custom_instructions %}
+— {{ custom_instruction }}
+{% endfor %}
+{% endif %}
+— Then consider how they will close the monologue, ensure that it concludes the topic.
+{% if make_mistake%}
+— Ensure the speaker makes a mistake somewhere and corrects themselves.
+— Ensure that another speaker points out the mistake and corrects the other speaker.
+{% endif %}
+{% if solution %}
+— The solution is {{solution}}, you only need to fill in the intermediate gaps.
+{% endif %}
+— Ensure to always use full names including first and last names if known.
+— Ensure that there is a minimum of {{minimum_turns}} steps in the plan and a maximum of {{minimum_turns*2}} steps.
+— Return your response as a JSON object.

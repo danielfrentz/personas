@@ -1,0 +1,21 @@
+— First, consider the following backstory of the person who wears this clothing. In particular look at their physical description for hints as to what they would choose to wear.
+{% include "profile_template.j2" with context %}
+— Then consider the following description of their physical appearance.
+{%  include "physical_appearance.j2" with context %}
+{% if physical_description.clothing | length > 0 %}
+— Then consider the following list of clothing that they already have and do not copy any of them nor copy the same type, diversity is the goal.
+{%  set clothing = physical_description.clothing %}
+{%  include "clothing_template.j2" with context %}
+{%  include "setting_description.j2" with context %}
+{% endif %}
+- Then consider an indepth description for this piece of clothing, ensuring to add in why this particular person uses it.
+— Then consider what kind of clothing they would choose to wear.
+— Then consider if this clothing has any personal significance that could tell us more about this particular person.
+— Then consider when they would use this clothing.
+— Remember, this is a showpiece of this particular persons' wardrobe so it should be representative of the person's wardrobe.
+— Ensure that it is realistic and not from a fantasy world.
+— On what is allowed, there's no real rules, as long as its realistic.
+— For the diffusion model description, give a detailed description that could be passed directly to a diffusion model to render this item.
+{%  if backstory.historical == true %}
+— Given {{ backstory.name }} was a historical figure, use clothing that {{ backstory.name }} actually used.
+{%  endif %}

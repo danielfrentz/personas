@@ -1,0 +1,15 @@
+from fastapi import APIRouter
+
+from endpoint.generate.monologue import monologue_generate_router
+from endpoint.generate.persona import persona_generate_router
+from endpoint.generate.self_description_conversation import self_description_conversation_generate_router
+from endpoint.generate.universe_description import universe_description_generate_router
+from endpoint.generate.universe_location import universe_location_generate_router
+
+universe_generate_router = APIRouter(prefix="/universe")
+universe_generate_router.include_router(persona_generate_router)
+universe_generate_router.include_router(monologue_generate_router)
+universe_generate_router.include_router(universe_location_generate_router)
+universe_generate_router.include_router(universe_description_generate_router)
+
+universe_generate_router.include_router(self_description_conversation_generate_router)
