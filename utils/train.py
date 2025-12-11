@@ -405,12 +405,12 @@ def train_iteration(model, tokenizer, epoch_count: int, layers_to_train, batch_s
 
 def load_model(model_name: str, f32=False, enable_checkpoint=False):
     tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True, device_map="cuda", use_fast=True,
-                                              local_files_only=False, token="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",
+                                              local_files_only=False,
                                               fix_mistral_regex=True)
     if not f32:
         model = AutoModelForCausalLM.from_pretrained(model_name, trust_remote_code=True, dtype=torch.bfloat16,
                                                      device_map="cuda", local_files_only=False,
-                                                     token="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")
+                                                     )
     else:
         model = AutoModelForCausalLM.from_pretrained(model_name, trust_remote_code=True,
                                                      device_map="cuda", local_files_only=False,
@@ -534,3 +534,4 @@ def main():
 if __name__ == "__main__":
     random.seed(42)  # ensure that all runs use the same sequence.
     main()
+
