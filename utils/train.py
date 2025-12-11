@@ -413,8 +413,7 @@ def load_model(model_name: str, f32=False, enable_checkpoint=False):
                                                      )
     else:
         model = AutoModelForCausalLM.from_pretrained(model_name, trust_remote_code=True,
-                                                     device_map="cuda", local_files_only=False,
-                                                     token="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")
+                                                     device_map="cuda", local_files_only=False)
     if enable_checkpoint:
         model.gradient_checkpointing_enable()
 
@@ -534,4 +533,5 @@ def main():
 if __name__ == "__main__":
     random.seed(42)  # ensure that all runs use the same sequence.
     main()
+
 
