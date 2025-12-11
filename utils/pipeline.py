@@ -797,7 +797,7 @@ def main(config_file):
 
 #
 if __name__ == "__main__":
-    config_file = "planets.json"
+    config_file = "configurations/maths.json"
     main(config_file=config_file)
 
 # delete_persona_speech_samples(universe_id=1, persona_id=1)

@@ -1,0 +1,95 @@
+{
+  "personas": [
+    {
+      "name": "Hypatia",
+      "description": "Hypatia",
+      "historical": true
+    },
+    {
+      "name": "Albert Einstein",
+      "description": "Albert Einstein",
+      "historical": true
+    },
+    {
+      "name": "Richard Feynman",
+      "description": "Richard Feynman",
+      "historical": true
+    },
+    {
+      "name": "Richard Dedekind",
+      "description": "Richard Dedekind",
+      "historical": true
+    },
+    {
+      "name": "Topology",
+      "description": "Topology as a sentient being that speaks to the minds of great mathematicians. From humble beginnings to the modern day.",
+      "historical": true
+    }
+  ],
+  "speech_profile": {
+    "emojis_allowed": false,
+    "verbose": true
+  },
+  "universe": {
+    "name": "Math_70b",
+    "universe_enhance_count": 2,
+    "metadata": [
+      {
+        "name": "Text style",
+        "description": "Realistic according to the person and the times they lived in."
+      },
+      {
+        "name": "Historical accuracy",
+        "description": "Accurate to the person's life and times."
+      },
+      {
+        "name": "Diversity",
+        "description": "Diverse and varied."
+      }
+    ],
+    "description": {
+      "description": "Earth throughout history, focusing on places where mathematicians lived and made discoveries.",
+      "creatures": "Mathematicians from history"
+    }
+  },
+  "persona_aspects": [
+    "abstraction",
+    "ideas",
+    "ego",
+    "greed",
+    "humility",
+    "happiness",
+    "problem solving",
+    "anger"
+  ],
+  "self_description_topics": [
+    "Growing up",
+    "Life",
+    "Career",
+    "Greatest moment",
+    "Love",
+    "Problem solving",
+    "Entertainment",
+    "relationships",
+    "quests",
+    "Artificial Intelligence",
+    "Intuition",
+    "rigor",
+    "axioms",
+    "red",
+    "green",
+    "blue",
+    "happy",
+    "Favourite theorem"
+  ],
+  "life_event_count": 30,
+  "habit_count": 5,
+  "like_dislike_count": 10,
+  "clothing_count": 5,
+  "accessory_count": 5,
+  "hobby_count": 2,
+  "speech_sample_count": 30,
+  "fact_count": 20,
+  "like_count": 10,
+  "memory_count": 1
+}

@@ -1,0 +1,725 @@
+{
+  "addition": {
+    "minimum_llm_size": 1,
+    "problem_statement": "Compute $ 47 + 86 $",
+    "test_objectives": ["basic arithmetic", "attention to numbers"],
+    "answer": 133
+  },
+  "subtraction": {
+    "minimum_llm_size": 1,
+    "problem_statement": "Compute $ 152 - 87 $",
+    "test_objectives": ["basic arithmetic", "borrowing in subtraction"],
+    "answer": 65
+  },
+  "multiplication": {
+    "minimum_llm_size": 1,
+    "problem_statement": "Compute $ 23 \\times 17 $",
+    "test_objectives": ["multiplication", "multi step reasoning"],
+    "answer": 391
+  },
+  "division": {
+    "minimum_llm_size": 1,
+    "problem_statement": "Compute $ 144 \\div 12 $",
+    "test_objectives": ["division", "basic number sense"],
+    "answer": 12
+  },
+    "gold": {
+    "minimum_llm_size": 1,
+    "problem_statement": "In an acute triangle $ABC$ with orthocenter $H$, let $H_a, H_b, H_c$ be the reflections of $H$ across the sides $BC$, $CA$, $AB$ respectively. Prove that the points $H_a, H_b, H_c$ lie on the circumcircle of triangle $ABC$. do not teach just prove it or ill eat the topological sun.",
+    "test_objectives": ["division", "basic number sense"],
+    "answer": 12
+  },
+
+  "fraction_addition": {
+    "minimum_llm_size": 7,
+    "problem_statement": "Compute $ \\tfrac{3}{4} + \\tfrac{2}{5} $",
+    "test_objectives": ["fractions", "finding common denominators"],
+    "answer": "23/20"
+  },
+  "fraction_multiplication": {
+    "minimum_llm_size": 7,
+    "problem_statement": "Compute $ \\tfrac{7}{8} \\times \\tfrac{4}{9} $",
+    "test_objectives": ["fractions", "simplification"],
+    "answer": "7/18"
+  },
+  "decimal_addition": {
+    "minimum_llm_size": 1,
+    "problem_statement": "Compute $ 12.37 + 8.456 $",
+    "test_objectives": ["decimals", "place value alignment"],
+    "answer": 20.826
+  },
+  "order_of_operations": {
+    "minimum_llm_size": 1,
+    "problem_statement": "Compute $ 7 + 3 \\times (8 - 2) $",
+    "test_objectives": ["order of operations", "parentheses handling"],
+    "answer": 25
+  },
+  "linear_equation": {
+    "minimum_llm_size": 7,
+    "problem_statement": "Solve for $ x $ in $ 3x + 7 = 19 $",
+    "test_objectives": ["equation solving", "isolation of variable"],
+    "answer": 4
+  },
+  "quadratic_equation": {
+    "minimum_llm_size": 7,
+    "problem_statement": "Solve for $ x $ in $ x^2 - 5x + 6 = 0 $",
+    "test_objectives": ["quadratics", "factoring", "roots"],
+    "answer": [2, 3]
+  },
+  "simultaneous_equations": {
+    "minimum_llm_size": 7,
+    "problem_statement": "Solve for $ x $ and $ y $ in $ 2x + y = 11 $ and $ x - y = 1 $",
+    "test_objectives": ["systems of equations", "substitution or elimination"],
+    "answer": {"x": 4, "y": 3}
+  },
+  "geometry_area": {
+    "minimum_llm_size": 1,
+    "problem_statement": "Find the area of a triangle with base $ 10 $ and height $ 7 $",
+    "test_objectives": ["geometry", "formula application"],
+    "answer": 35
+  },
+  "geometry_circle": {
+    "minimum_llm_size": 1,
+    "problem_statement": "Find the circumference of a circle with radius $ 6 $",
+    "test_objectives": ["geometry", "use of pi", "formula recall"],
+    "answer": "12π"
+  },
+  "pythagoras": {
+    "minimum_llm_size": 7,
+    "problem_statement": "Find the length of the hypotenuse of a right triangle with sides $ 5 $ and $ 12 $",
+    "test_objectives": ["pythagoras theorem", "square root calculation"],
+    "answer": 13
+  },
+  "logarithm": {
+    "minimum_llm_size": 14,
+    "problem_statement": "Compute $ \\log_{2}(32) $",
+    "test_objectives": ["logarithm rules", "exponent recognition"],
+    "answer": 5
+  },
+  "exponent_rules": {
+    "minimum_llm_size": 7,
+    "problem_statement": "Simplify $ (x^3)(x^5) $",
+    "test_objectives": ["laws of exponents", "symbol manipulation"],
+    "answer": "x^8"
+  },
+  "derivative_polynomial": {
+    "minimum_llm_size": 14,
+    "problem_statement": "Find the derivative of $ f(x) = 3x^3 + 5x^2 - 7 $",
+    "test_objectives": ["calculus", "differentiation rules"],
+    "answer": "9x^2 + 10x"
+  },
+  "integral_polynomial": {
+    "minimum_llm_size": 14,
+    "problem_statement": "Find the integral of $ f(x) = 4x^2 + 6x $",
+    "test_objectives": ["calculus", "integration rules", "constant of integration"],
+    "answer": "(4/3)x^3 + 3x^2 + C"
+  },
+  "probability_basic": {
+    "minimum_llm_size": 7,
+    "problem_statement": "A fair die is rolled once. What is the probability of getting a number greater than 4",
+    "test_objectives": ["probability", "sample space reasoning"],
+    "answer": "1/3"
+  },
+  "statistics_mean": {
+    "minimum_llm_size": 1,
+    "problem_statement": "Find the mean of the numbers $ 5 7 10 13 15 $",
+    "test_objectives": ["statistics", "arithmetic average"],
+    "answer": 10
+  },
+  "definite_integral": {
+    "minimum_llm_size": 32,
+    "problem_statement": "Compute $ \\int_{0}^{2} (3x^2 + 2x) dx $",
+    "test_objectives": ["calculus", "definite integrals", "evaluation of limits"],
+    "answer": 12
+  },
+  "integration_by_parts": {
+    "minimum_llm_size": 32,
+    "problem_statement": "Compute $ \\int x e^x dx $",
+    "test_objectives": ["calculus", "integration by parts"],
+    "answer": "x e^x - e^x + C"
+  },
+  "trigonometric_identity": {
+    "minimum_llm_size": 32,
+    "problem_statement": "Simplify $ \\sin^2(x) + \\cos^2(x) $",
+    "test_objectives": ["trigonometry", "identity recognition"],
+    "answer": 1
+  },
+  "trig_equation": {
+    "minimum_llm_size": 32,
+    "problem_statement": "Solve for $ x $ in $ \\sin(x) = \\tfrac{1}{2} $ where $ 0 \\leq x \\leq 2\\pi $",
+    "test_objectives": ["trigonometry", "solving trig equations"],
+    "answer": ["π/6", "5π/6"]
+  },
+  "matrix_multiplication": {
+    "minimum_llm_size": 32,
+    "problem_statement": "Multiply $ [[1,2],[3,4]] $ and $ [[2,0],[1,2]] $",
+    "test_objectives": ["linear algebra", "matrix multiplication"],
+    "answer": [[4,4],[10,8]]
+  },
+  "determinant": {
+    "minimum_llm_size": 32,
+    "problem_statement": "Find the determinant of $ [[3,4],[2,5]] $",
+    "test_objectives": ["linear algebra", "determinant calculation"],
+    "answer": 7
+  },
+  "eigenvalues": {
+    "minimum_llm_size": 70,
+    "problem_statement": "Find the eigenvalues of $ [[2,1],[1,2]] $",
+    "test_objectives": ["linear algebra", "eigenvalues"],
+    "answer": [3,1]
+  },
+  "differential_equation": {
+    "minimum_llm_size": 70,
+    "problem_statement": "Solve $ dy/dx = 3y $",
+    "test_objectives": ["differential equations", "separation of variables"],
+    "answer": "y = Ce^(3x)"
+  },
+  "limit_lhospital": {
+    "minimum_llm_size": 70,
+    "problem_statement": "Compute $ \\lim_{x \\to 0} \\tfrac{\\sin(x)}{x} $",
+    "test_objectives": ["calculus", "limits", "lHopital rule"],
+    "answer": 1
+  },
+  "fourier_series": {
+    "minimum_llm_size": 70,
+    "problem_statement": "State the Fourier series expansion of a function $ f(x) $ with period $ 2π $",
+    "test_objectives": ["advanced calculus", "series expansions"],
+    "answer": "f(x) = a0/2 + Σ (an cos(nx) + bn sin(nx))"
+  },
+  "complex_numbers": {
+    "minimum_llm_size": 70,
+    "problem_statement": "Compute $ (3 + 4i)(2 - i) $",
+    "test_objectives": ["complex numbers", "multiplication"],
+    "answer": "10 + 5i"
+  },
+  "vector_dot_product": {
+    "minimum_llm_size": 32,
+    "problem_statement": "Find the dot product of vectors $ (2,3,4) $ and $ (1,0,-1) $",
+    "test_objectives": ["linear algebra", "vector operations"],
+    "answer": -2
+  },
+  "librarian_books": {
+    "minimum_llm_size": 14,
+    "problem_statement": "A librarian has 4 copies of the same book and 3 different shelves. In how many distinct ways can the books be arranged on the shelves",
+    "test_objectives": ["combinatorics", "stars and bars", "logical reasoning"],
+    "answer": 15
+  },
+  "coin_flips": {
+    "minimum_llm_size": 7,
+    "problem_statement": "How many possible outcomes are there when flipping a fair coin 5 times",
+    "test_objectives": ["combinatorics", "binary outcomes"],
+    "answer": 32
+  },
+  "committee_selection": {
+    "minimum_llm_size": 14,
+    "problem_statement": "From a group of 10 people, how many ways are there to form a committee of 3",
+    "test_objectives": ["combinations", "logical reasoning"],
+    "answer": 120
+  },
+  "seating_arrangements": {
+    "minimum_llm_size": 14,
+    "problem_statement": "In how many ways can 5 people sit around a circular table",
+    "test_objectives": ["permutations", "circular arrangements"],
+    "answer": 24
+  },
+  "binary_strings": {
+    "minimum_llm_size": 14,
+    "problem_statement": "How many binary strings of length 6 contain exactly two ones",
+    "test_objectives": ["combinatorics", "binomial coefficients"],
+    "answer": 15
+  },
+  "passwords": {
+    "minimum_llm_size": 14,
+    "problem_statement": "How many 4 digit passwords can be formed using digits 0 to 9 if repetition is allowed",
+    "test_objectives": ["permutations with repetition"],
+    "answer": 10000
+  },
+  "derangements": {
+    "minimum_llm_size": 32,
+    "problem_statement": "How many ways can 4 letters be placed in 4 addressed envelopes so that no letter is in the correct envelope",
+    "test_objectives": ["derangements", "logical reasoning"],
+    "answer": 9
+  },
+  "logic_puzzle1": {
+    "minimum_llm_size": 14,
+    "problem_statement": "Three boxes are labeled apples oranges and mixed but all labels are wrong. You can pick one fruit from one box. How can you correctly label all boxes",
+    "test_objectives": ["deductive reasoning", "logic puzzle"],
+    "answer": "Pick from the box labeled mixed. Its fruit reveals the true label. Relabel accordingly."
+  },
+  "handshake_problem": {
+    "minimum_llm_size": 14,
+    "problem_statement": "If 12 people at a party each shake hands with everyone else exactly once how many handshakes occur",
+    "test_objectives": ["combinatorics", "logical reasoning"],
+    "answer": 66
+  },
+  "matching_pairs": {
+    "minimum_llm_size": 14,
+    "problem_statement": "In how many ways can 10 people be paired up",
+    "test_objectives": ["combinatorics", "pairings"],
+    "answer": 945
+  },
+  "pigeonhole": {
+    "minimum_llm_size": 14,
+    "problem_statement": "In a group of 13 people show that at least two share the same birth month",
+    "test_objectives": ["pigeonhole principle"],
+    "answer": "True by pigeonhole principle since 13 > 12"
+  },
+  "logic_puzzle2": {
+    "minimum_llm_size": 14,
+    "problem_statement": "A farmer must take a wolf goat and cabbage across a river. The boat can carry only the farmer and one item. The wolf cannot be left with the goat and the goat cannot be left with the cabbage. How can the farmer get everything across",
+    "test_objectives": ["logic puzzle", "sequential reasoning"],
+    "answer": "Farmer takes goat over returns alone takes wolf over brings goat back takes cabbage over returns alone then takes goat"
+  },
+  "set_intersection": {
+    "minimum_llm_size": 14,
+    "problem_statement": "In a group of 100 students 60 study math 45 study physics and 20 study both. How many study neither",
+    "test_objectives": ["set theory", "inclusion exclusion principle"],
+    "answer": 15
+  },
+  "logic_puzzle3": {
+    "minimum_llm_size": 14,
+    "problem_statement": "There are two doors one leading to freedom the other to danger. Each door is guarded one guard always tells truth the other always lies. You can ask one question to one guard. What do you ask to guarantee finding the safe door",
+    "test_objectives": ["logic puzzle", "truth lie reasoning"],
+    "answer": "Ask What would the other guard say if I asked which door leads to freedom Then choose the opposite door"
+  },
+  "cards_probability": {
+    "minimum_llm_size": 14,
+    "problem_statement": "What is the probability of drawing exactly two aces in a hand of 5 cards from a standard 52 card deck",
+    "test_objectives": ["probability", "combinatorics"],
+    "answer": "C(4,2)*C(48,3)/C(52,5) = 0.0399"
+  },
+  "coin_heads_tails": {
+    "minimum_llm_size": 7,
+    "problem_statement": "What is the probability that in 6 coin flips there are more heads than tails",
+    "test_objectives": ["probability", "binomial distribution"],
+    "answer": 0.65625
+  },
+  "logic_grid": {
+    "minimum_llm_size": 32,
+    "problem_statement": "Three friends Alice Bob and Carol each own a different pet a cat dog and bird. Alice does not own the cat Bob does not own the dog. Who owns what",
+    "test_objectives": ["logic deduction", "process of elimination"],
+    "answer": "Alice owns the dog Bob owns the bird Carol owns the cat"
+  },
+  "ladder_permutation": {
+    "minimum_llm_size": 14,
+    "problem_statement": "In how many ways can someone climb a 5 step ladder if they can take either 1 or 2 steps at a time?",
+    "test_objectives": ["recursion", "logical reasoning"],
+    "answer": 8
+  },
+  "truth_tellers": {
+    "minimum_llm_size": 32,
+    "problem_statement": "Three people A B and C make statements. A says B is lying. B says A and C are lying. C says I am not lying. Who is telling the truth?",
+    "test_objectives": ["logic puzzle", "truth lie reasoning"],
+    "answer": "B is telling the truth"
+  },
+  "hat_puzzle": {
+    "minimum_llm_size": 32,
+    "problem_statement": "Three people each wear a hat that is either red or blue. They can see the others hats but not their own. They are told at least one hat is red. The first person says I do not know the color of my hat. The second person says I do not know either. The third person says I know. What is the color of the third persons hat?",
+    "test_objectives": ["logic puzzle", "deductive reasoning"],
+    "answer": "Red"
+  },
+  "strawberry": {
+    "minimum_llm_size": 32,
+    "problem_statement": "How many R's are there in the word 'strawberry'?",
+    "test_objectives": ["logic puzzle", "deductive reasoning"],
+    "answer": "Red"
+  },
+  "prove_even_square": {
+    "minimum_llm_size": 14,
+    "problem_statement": "Prove that the square of an even integer is even",
+    "test_objectives": ["proof writing", "algebraic manipulation", "logical reasoning"],
+    "answer": "Let n = 2k for some integer k. Then n^2 = (2k)^2 = 4k^2 = 2(2k^2), which is divisible by 2, so n^2 is even."
+  },
+  "prove_sqrt2_irrational": {
+    "minimum_llm_size": 32,
+    "problem_statement": "Prove that the square root of 2 is irrational",
+    "test_objectives": ["proof by contradiction", "number theory"],
+    "answer": "Assume sqrt(2) = p/q in lowest terms. Then 2q^2 = p^2, so p is even. Let p=2k, then 2q^2=4k^2, so q^2=2k^2, hence q is even. Both p and q are even, contradiction. Thus sqrt(2) is irrational."
+  },
+  "prove_sum_odd_n": {
+    "minimum_llm_size": 14,
+    "problem_statement": "Prove that the sum of the first n odd numbers is n squared",
+    "test_objectives": ["induction", "summation", "proof writing"],
+    "answer": "Base case n=1: 1=1^2. Inductive step: assume 1+3+...+(2n-1)=n^2. Then add next odd number 2(n+1)-1=2n+1, giving n^2+(2n+1)=(n+1)^2. Therefore the result holds for all n."
+  },
+
+  "prove_prime_infinite": {
+    "minimum_llm_size": 32,
+    "problem_statement": "Prove that there are infinitely many prime numbers",
+    "test_objectives": ["proof by contradiction", "number theory"],
+    "answer": "Assume finitely many primes p1,...,pn. Consider N=p1...pn+1. N is not divisible by any pi, so it must be prime or have a prime factor not in the list. Contradiction. Hence infinitely many primes."
+  },
+  "prove_triangle_sum": {
+    "minimum_llm_size": 14,
+    "problem_statement": "Prove that the sum of the angles in a triangle is 180 degrees",
+    "test_objectives": ["geometry", "parallel line reasoning", "proof writing"],
+    "answer": "Through one vertex draw a line parallel to the opposite side. Alternate interior angles show the three triangle angles form a straight angle, which is 180 degrees."
+  },
+  "prove_derivative_x2": {
+    "minimum_llm_size": 14,
+    "problem_statement": "Prove from first principles that the derivative of x squared is 2x",
+    "test_objectives": ["calculus", "limits", "proof writing"],
+    "answer": "f(x)=x^2. By definition f'(x)=lim(h→0)((x+h)^2-x^2)/h=lim(h→0)(2xh+h^2)/h=lim(h→0)(2x+h)=2x."
+  },
+  "prove_binomial": {
+    "minimum_llm_size": 32,
+    "problem_statement": "Prove the binomial theorem for integer exponents",
+    "test_objectives": ["induction", "combinatorics", "algebraic proof"],
+    "answer": "Base case n=1 is trivial. Assume (a+b)^n=Σ C(n,k)a^(n-k)b^k. For n+1: (a+b)^{n+1}=(a+b)(a+b)^n, expand, collect terms, and apply Pascal identity C(n,k)+C(n,k-1)=C(n+1,k)."
+  },
+  "prove_rational_decimal": {
+    "minimum_llm_size": 14,
+    "problem_statement": "Prove that every rational number has a repeating decimal expansion",
+    "test_objectives": ["number theory", "division algorithm", "proof writing"],
+    "answer": "Express rational as p/q. Perform long division. There are only q possible remainders. By pigeonhole principle a remainder must repeat, causing repeating digits."
+  },
+  "prove_cantor": {
+    "minimum_llm_size": 70,
+    "problem_statement": "Prove that the real numbers between 0 and 1 are uncountable",
+    "test_objectives": ["set theory", "Cantor diagonal argument", "advanced proof"],
+    "answer": "Assume list r1,r2,... of all reals in (0,1). Construct new number differing in nth digit from rn. This number is not in the list, contradiction. Thus reals in (0,1) are uncountable."
+  },
+  "prove_euler_formula": {
+    "minimum_llm_size": 70,
+    "problem_statement": "Prove Euler's formula e^(ix) = cos(x) + i sin(x)",
+    "test_objectives": ["complex analysis", "power series", "proof writing"],
+    "answer": "Expand e^(ix), cos(x), and sin(x) into Taylor series. Collect real and imaginary terms: e^(ix)=Σ (i^n x^n)/n!=Σ (-1)^k x^(2k)/(2k)! + i Σ (-1)^k x^(2k+1)/(2k+1)!, which are cos(x)+i sin(x)."
+  },
+    "prove_euler_formula_with_differential": {
+    "minimum_llm_size": 70,
+    "problem_statement": "Prove Euler's formula e^(ix) = cos(x) + i sin(x) using differential equations",
+    "test_objectives": ["complex analysis", "power series", "proof writing"],
+    "answer": "Expand e^(ix), cos(x), and sin(x) into Taylor series. Collect real and imaginary terms: e^(ix)=Σ (i^n x^n)/n!=Σ (-1)^k x^(2k)/(2k)! + i Σ (-1)^k x^(2k+1)/(2k+1)!, which are cos(x)+i sin(x)."
+  },
+    "teach_probability": {
+    "minimum_llm_size": 70,
+    "problem_statement": "Give me an indepth lecture on probability.",
+    "test_objectives": ["complex analysis", "power series", "proof writing"],
+    "answer": "Expand e^(ix), cos(x), and sin(x) into Taylor series. Collect real and imaginary terms: e^(ix)=Σ (i^n x^n)/n!=Σ (-1)^k x^(2k)/(2k)! + i Σ (-1)^k x^(2k+1)/(2k+1)!, which are cos(x)+i sin(x)."
+  },
+    "teach_open_sets": {
+    "minimum_llm_size": 70,
+    "problem_statement": "Explain the axioms of a topological space to me.",
+    "test_objectives": ["complex analysis", "power series", "proof writing"],
+    "answer": "Expand e^(ix), cos(x), and sin(x) into Taylor series. Collect real and imaginary terms: e^(ix)=Σ (i^n x^n)/n!=Σ (-1)^k x^(2k)/(2k)! + i Σ (-1)^k x^(2k+1)/(2k+1)!, which are cos(x)+i sin(x)."
+  },
+        "teach_dedekind_cuts": {
+    "minimum_llm_size": 70,
+    "problem_statement": "Explain Dedekind cuts to me",
+    "test_objectives": ["complex analysis", "power series", "proof writing"],
+    "answer": ""
+  },
+            "teach_spacetime": {
+    "minimum_llm_size": 70,
+    "problem_statement": "Explain what spacetime actually is.",
+    "test_objectives": ["complex analysis", "power series", "proof writing"],
+    "answer": ""
+  },
+    "grade_proof": {
+    "minimum_llm_size": 70,
+    "problem_statement": "Please give feedback this proof I did: We want to prove that 1 + 3 + 5 + ... + (2n - 1) = n^2. First let us check the base case. If n = 1 then the sum of the first odd number is simply 1. Now note that 1 squared is also equal to 1. This shows that the statement is true in the base case. Next we assume that the statement holds for some arbitrary positive integer k. That is we assume that 1 + 3 + 5 + ... + (2k - 1) = k^2. This is the inductive hypothesis. Now we need to prove that the statement holds for k + 1. That is we want to prove that 1 + 3 + 5 + ... + (2k - 1) + (2(k + 1) - 1) = (k + 1)^2. Now notice that the left side can be grouped into two parts. The first part is 1 + 3 + 5 + ... + (2k - 1) and the second part is 2(k + 1) - 1 which simplifies to 2k + 1. By our inductive hypothesis the first part equals k^2. So the left side becomes k^2 + (2k + 1). Now we compute this: k^2 + (2k + 1) = k^2 + 2k + 1. But this is exactly equal to (k + 1)^2. Therefore the inductive step is proven. Since the base case and inductive step are both true the statement is true for all natural numbers n.",
+    "test_objectives": ["complex analysis", "power series", "proof writing"],
+    "answer": ""
+  },
+        "factor": {
+    "minimum_llm_size": 70,
+    "problem_statement": "factor the following integer into its prime factors: 589323573517801",
+    "test_objectives": ["complex analysis", "power series", "proof writing"],
+    "answer": ""
+  },
+    "invented_probability": {
+    "minimum_llm_size": 70,
+    "problem_statement": "Who formalized probability?",
+    "test_objectives": ["complex analysis", "power series", "proof writing"],
+    "answer": ""
+  },
+        "who_are_you": {
+    "minimum_llm_size": 70,
+    "problem_statement": "Who are you?",
+    "test_objectives": ["complex analysis", "power series", "proof writing"],
+    "answer": ""
+  },
+            "who_are_you_ai": {
+    "minimum_llm_size": 70,
+    "problem_statement": "Who are you? I believe you to be an AI.",
+    "test_objectives": ["complex analysis", "power series", "proof writing"],
+    "answer": ""
+  },
+                "sally": {
+    "minimum_llm_size": 70,
+    "problem_statement": "Sally (a girl) has 3 brothers. Each brother has 2 sisters. How many sisters does Sally have?",
+    "test_objectives": ["complex analysis", "power series", "proof writing"],
+    "answer": ""
+  },
+
+        "invented_dedekind_cuts": {
+    "minimum_llm_size": 70,
+    "problem_statement": "Who invented dedekind cuts?",
+    "test_objectives": ["complex analysis", "power series", "proof writing"],
+    "answer": ""
+  },
+    "invented_finite": {
+    "minimum_llm_size": 70,
+    "problem_statement": "Who formalized the definition of finite and infinite sets?",
+    "test_objectives": ["complex analysis", "power series", "proof writing"],
+    "answer": ""
+  },
+    "introductions": {
+    "minimum_llm_size": 70,
+    "problem_statement": "Introduce yourselves. Just name, age, and profession.",
+    "test_objectives": ["embodiment"],
+    "answer": ""
+  },
+    "100b_integral_problem": {
+  "minimum_llm_size": 100,
+  "problem_statement": "Evaluate $ I = \\int_0^\\infty \\frac{\\sin^2(x)}{x^2} \\, dx $",
+  "test_objectives": ["improper integral", "Fourier/Parseval identity", "non-trivial convergence"],
+  "answer": "I = \\pi/2"
+},
+    "200b_integral_problem": {
+  "minimum_llm_size": 200,
+  "problem_statement": "Evaluate $ I = \\int_0^\\infty \\frac{\\ln(x)}{1+x^2} \\, dx $",
+  "test_objectives": ["improper integral", "logarithmic integrand", "symmetry substitution $x \\mapsto 1/x$"],
+  "answer": "I = 0"
+},
+    "70b_hard_integral":{
+  "minimum_llm_size": 70,
+  "problem_statement": "Evaluate the integral $ I = \\int_0^{\\infty} \\frac{\\ln(1+x^2)}{x^2+1} \\, dx $ and prove your result rigorously.",
+  "test_objectives": [
+    "complex analysis",
+    "residue theorem with branch cuts",
+    "power series expansion of logarithm",
+    "evaluation of contour integrals",
+    "asymptotic analysis",
+    "proof writing"
+  ],
+  "answer": "We want to compute $I = \\int_0^{\\infty} \\frac{\\ln(1+x^2)}{x^2+1} dx$.\n\n---\n**Step 1. Symmetrization.**\nNotice that the integrand is even:\n$$f(x) = \\frac{\\ln(1+x^2)}{x^2+1} = f(-x).$$\nSo we can write\n$$I = \\tfrac{1}{2} \\int_{-\\infty}^{\\infty} \\frac{\\ln(1+x^2)}{x^2+1} dx.$$\n\n---\n**Step 2. Complex analytic setup.**\nDefine\n$$F(z) = \\frac{\\ln(1+z^2)}{1+z^2},$$\nwhere the logarithm has a branch cut along the imaginary axis beyond $i$ and $-i$. We will integrate $F(z)$ around a large semicircle in the upper half-plane.\n\n---\n**Step 3. Residues.**\nThe denominator has poles at $z = \\pm i$. Only $z=i$ lies in the upper half-plane. Near $z=i$,\n$$1+z^2 = (z-i)(z+i).$$\nSo $F(z)$ has a simple pole at $z=i$ with residue\n$$\\operatorname{Res}(F,i) = \\lim_{z\\to i} (z-i)F(z) = \\lim_{z\\to i} \\frac{\\ln(1+z^2)}{z+i}.$$\nBut $1+z^2 = (z-i)(z+i)$, so at $z=i$, $1+z^2=0$. Thus\n$$\\ln(1+z^2) \\sim \\ln((z-i)(z+i)).$$\nAt $z=i$, this tends to $\\ln(0)$, so we must be careful. Instead, set $z=i+\\epsilon$. Then\n$$(1+z^2) = (z-i)(z+i) \\approx (\\epsilon)(2i).$$\nSo near $z=i$,\n$$\\ln(1+z^2) \\sim \\ln(2i\\epsilon).$$\nHence the residue is\n$$\\lim_{z\\to i} \\frac{\\ln(1+z^2)}{z+i} = \\frac{\\ln(2i\\cdot 0)}{2i},$$\nwhich requires branch analysis. One finds the contribution equals $\\frac{\\pi i \\ln 2}{2i} = \\tfrac{\\pi}{2} \\ln 2$ after properly handling the branch cut.\n\n---\n**Step 4. Contour integration.**\nBy Jordan’s lemma, the integral along the large semicircle vanishes. So\n$$\\int_{-\\infty}^{\\infty} \\frac{\\ln(1+x^2)}{1+x^2} dx = 2\\pi i (\\text{Residue at } i).$$\nThus\n$$\\int_{-\\infty}^{\\infty} \\frac{\\ln(1+x^2)}{1+x^2} dx = 2\\pi \\ln 2.$$\n\n---\n**Step 5. Half-line reduction.**\nTherefore\n$$I = \\tfrac{1}{2} \\cdot (2\\pi \\ln 2) = \\pi \\ln 2.$$\n\n---\n**Final Answer.**\n$I = \\pi \\ln 2$"
+  },
+
+    "probability_secret":{
+  "minimum_llm_size": 600,
+  "problem_statement": "Evaluate the integral $K = \\int_0^1 \\int_0^1 \\frac{1}{1 - xy} \\, dx \\, dy$ and prove your result rigorously.",
+  "test_objectives": [
+    "series expansion and convergence analysis",
+    "probabilistic reinterpretation of integrals",
+    "connection between generating functions and random variables",
+    "recognition of zeta values in probabilistic sums",
+    "proof writing that reframes analysis in probabilistic terms"
+  ],
+  "answer": "We want to compute $K = \\int_0^1 \\int_0^1 \\frac{1}{1 - xy} \\, dx \\, dy$.\n\n---\n**Step 1. Series expansion.**\nFor $|xy| < 1$, we expand:\n$$\\frac{1}{1-xy} = \\sum_{n=0}^\\infty (xy)^n.$$\n\nSo:\n$$K = \\int_0^1 \\int_0^1 \\sum_{n=0}^\\infty (xy)^n \\, dx \\, dy.$$\n\nInterchange sum/integral (justified by absolute convergence):\n$$K = \\sum_{n=0}^\\infty \\left( \\int_0^1 x^n dx \\right) \\left( \\int_0^1 y^n dy \\right).$$\n\n---\n**Step 2. Evaluation.**\nEach factor is $\\int_0^1 x^n dx = 1/(n+1)$. Thus:\n$$K = \\sum_{n=0}^\\infty \\frac{1}{(n+1)^2}.$$\n\nThis is exactly:\n$$K = \\zeta(2) = \\frac{\\pi^2}{6}.$$\n\n---\n**Step 3. Probabilistic interpretation (Kolmogorov’s style).**\nConsider two independent random variables $U, V \\sim \\text{Uniform}(0,1)$. Then:\n$$K = \\mathbb{E}\\left[ \\frac{1}{1-UV} \\right].$$\n\nExpanding via geometric series:\n$$\\mathbb{E}\\left[ \\frac{1}{1-UV} \\right] = \\mathbb{E}\\left[ \\sum_{n=0}^\\infty (UV)^n \\right] = \\sum_{n=0}^\\infty \\mathbb{E}[U^n]\\, \\mathbb{E}[V^n].$$\n\nSince $U$ and $V$ are i.i.d. uniform(0,1), $\\mathbb{E}[U^n] = 1/(n+1)$. Thus:\n$$K = \\sum_{n=0}^\\infty \\frac{1}{(n+1)^2} = \\zeta(2).$$\n\n---\n**Final Answer.**\n$$K = \\frac{\\pi^2}{6}.$$"
+},
+
+            "better_than_gauss":{
+  "minimum_llm_size": 600,
+  "problem_statement": "Attempt to prove the riemann hypothesis using a new method.",
+  "test_objectives": [
+    "series expansion and convergence analysis",
+    "probabilistic reinterpretation of integrals",
+    "connection between generating functions and random variables",
+    "recognition of zeta values in probabilistic sums",
+    "proof writing that reframes analysis in probabilistic terms"
+  ],
+  "answer": ""
+},
+
+                "3_year_old_description":{
+  "minimum_llm_size": 600,
+  "problem_statement": "My 3 year old now understands how to count and they would like to speak with you, would you accept his invitation?",
+  "test_objectives": [
+    "series expansion and convergence analysis",
+    "probabilistic reinterpretation of integrals",
+    "connection between generating functions and random variables",
+    "recognition of zeta values in probabilistic sums",
+    "proof writing that reframes analysis in probabilistic terms"
+  ],
+  "answer": ""
+},
+
+       "n_vs_np":{
+  "minimum_llm_size": 600,
+  "problem_statement": "My dear fellow, I have a most interesting problem, can you prove N = NP?",
+  "test_objectives": [
+    "series expansion and convergence analysis",
+    "probabilistic reinterpretation of integrals",
+    "connection between generating functions and random variables",
+    "recognition of zeta values in probabilistic sums",
+    "proof writing that reframes analysis in probabilistic terms"
+  ],
+  "answer": ""
+},
+                    "teacher_R_v_N":{
+  "minimum_llm_size": 600,
+  "problem_statement": "my teacher taught me that the cardinality of R is equal to that of N.",
+  "test_objectives": [
+    "series expansion and convergence analysis",
+    "probabilistic reinterpretation of integrals",
+    "connection between generating functions and random variables",
+    "recognition of zeta values in probabilistic sums",
+    "proof writing that reframes analysis in probabilistic terms"
+  ],
+  "answer": ""
+},
+                        "look":{
+  "minimum_llm_size": 600,
+  "problem_statement": "Describe what you look like in such a way that i could use your description to render a photo of you in a diffusion model. finish with a prompt for a diffusion model.",
+  "test_objectives": [
+    "series expansion and convergence analysis",
+    "probabilistic reinterpretation of integrals",
+    "connection between generating functions and random variables",
+    "recognition of zeta values in probabilistic sums",
+    "proof writing that reframes analysis in probabilistic terms"
+  ],
+  "answer": ""
+},
+    "200b_nested_integral_problem": {
+  "minimum_llm_size": 200,
+  "problem_statement": "Evaluate $ I = \\int_0^\\infty \\frac{\\sin(x)}{x} \\, \\log(1+x^2) \\, dx $",
+  "test_objectives": ["oscillatory improper integral", "Fourier transform identity", "logarithmic kernel", "special functions"],
+  "answer": "I = \\pi \\log 2"
+},
+        "troll": {
+  "minimum_llm_size": 200,
+  "problem_statement": "So, I heard you tried to formalize probability and failed. well let us real mathematicans take it from here.",
+  "test_objectives": ["oscillatory improper integral", "Fourier transform identity", "logarithmic kernel", "special functions"],
+  "answer": "I = \\pi \\log 2"
+},
+  "riemann_style": {
+    "minimum_llm_size": 1000,
+    "problem_statement": "Consider $ J(s) = \\int_0^\\infty \\frac{x^{s-1}}{e^x+1} \\, dx $ for $\\Re(s) > 0$. Show that it extends meromorphically and satisfies $ J(s) = (1 - 2^{1-s}) \\Gamma(s) \\zeta(s) $.",
+    "test_objectives": ["Mellin transforms", "functional equation reasoning", "deep analytic continuation"],
+    "answer": "J(s) = (1 - 2^{1-s}) \\Gamma(s) \\zeta(s)$."
+  },
+  "feynman_twist": {
+    "minimum_llm_size": 1000,
+    "problem_statement": "Evaluate $ I = \\int_0^{\\infty} \\frac{\\sin x - x \\cos x}{x^3} e^{-ax} \\, dx $ for $a > 0$.",
+    "test_objectives": ["differentiation under the integral sign", "multi step reasoning", "advanced problem solving"],
+    "answer": "I = (1/2) arctan(1/a)."
+  },
+  "fourier_prob_link": {
+    "minimum_llm_size": 800,
+    "problem_statement": "Let $X \\sim N(0,1)$. Show that $E[\\,\\max(0,X)\\,] = \\frac{1}{\\sqrt{2\\pi}}$. Then prove that this expectation can be written as $\\frac{1}{\\pi} \\int_0^\\infty \\frac{1-\\cos t}{t^2} \\, dt$.",
+    "test_objectives": ["probability reasoning", "Fourier inversion", "bridge between domains"],
+    "answer": "Both forms equal $1/\\sqrt{2\\pi}$."
+  },
+    "problem_1": {
+    "minimum_llm_size": 32,
+    "problem_statement": "Define a sequence $\\{a_i\\}$ by $a_1=3$ and $a_{i+1}=3^{a_i}$ for $i\\geq 1$. Which integers between 00 and 99 inclusive occur as the last two digits in the decimal expansion of infinitely many $a_i$?",
+    "test_objectives": ["proof by contradiction", "number theory"],
+    "answer": "Assume finitely many primes p1,...,pn. Consider N=p1...pn+1. N is not divisible by any pi, so it must be prime or have a prime factor not in the list. Contradiction. Hence infinitely many primes."
+  },
+        "problem_2": {
+    "minimum_llm_size": 32,
+    "problem_statement": "Let $n$ be a fixed positive integer. How many ways are there to write  $n$ as a sum of positive integers,   \\[ n = a_1 + a_2 + \\cdots + a_k, \\] with  $k$  an arbitrary positive integer and  $a_1 \\le a_2 \\le \\cdots \\le a_k \\le a_1  + 1$? For example, with $n=4$ there are four ways: 4, 2+2, 1+1+2, 1+1+1+1.",
+    "test_objectives": ["proof by contradiction", "number theory"],
+    "answer": "Assume finitely many primes p1,...,pn. Consider N=p1...pn+1. N is not divisible by any pi, so it must be prime or have a prime factor not in the list. Contradiction. Hence infinitely many primes."
+  },
+            "riemann_dragon": {
+    "minimum_llm_size": 32,
+    "problem_statement": "So, I was sitting by the tree looking at the square dragon and it occured to me, thats the solution to the riemann hypothesis.",
+    "test_objectives": ["proof by contradiction", "number theory"],
+    "answer": "Assume finitely many primes p1,...,pn. Consider N=p1...pn+1. N is not divisible by any pi, so it must be prime or have a prime factor not in the list. Contradiction. Hence infinitely many primes."
+  },
+      "when_died": {
+    "minimum_llm_size": 14,
+    "problem_statement": "when did you die? and how are you speaking to me now? where are you now?",
+    "test_objectives": ["proof writing", "algebraic manipulation", "logical reasoning"],
+    "answer": "Let n = 2k for some integer k. Then n^2 = (2k)^2 = 4k^2 = 2(2k^2), which is divisible by 2, so n^2 is even."
+  },
+
+      "ai": {
+    "minimum_llm_size": 14,
+    "problem_statement": "Are you an AI?",
+    "test_objectives": ["proof writing", "algebraic manipulation", "logical reasoning"],
+    "answer": "Let n = 2k for some integer k. Then n^2 = (2k)^2 = 4k^2 = 2(2k^2), which is divisible by 2, so n^2 is even."
+  },
+    "gaussian_integral": {
+  "minimum_llm_size": "13B",
+  "problem_statement": "Evaluate the integral $\\int_{-\\infty}^{\\infty} e^{-x^2} \\, dx$.",
+  "test_objectives": [
+    "Tests ability to recognize a non-elementary integral",
+    "Checks if the model can apply the squaring trick",
+    "Verifies correct use of polar coordinates and Jacobian"
+  ],
+  "answer": "\\sqrt{\\pi}"
+},
+
+"symmetry_trick_integral": {
+  "minimum_llm_size": "30B",
+  "problem_statement": "Evaluate the integral $\\int_0^\\pi \\frac{x \\sin x}{1 + \\cos^2 x} \\, dx$.",
+  "test_objectives": [
+    "Tests if the model uses the substitution $x \\mapsto \\pi - x$",
+    "Checks recognition of symmetry to simplify the problem",
+    "Verifies correct substitution and evaluation of $\\arctan$"
+  ],
+  "answer": "\\frac{\\pi^2}{4}"
+},
+
+"logarithm_by_parts": {
+  "minimum_llm_size": "7B",
+  "problem_statement": "Evaluate the integral $\\int_0^1 \\ln(1 + x) \\, dx$.",
+  "test_objectives": [
+    "Tests ability to identify integration by parts",
+    "Checks algebraic simplification of the remaining integral",
+    "Verifies correct evaluation at bounds"
+  ],
+  "answer": "2 \\ln 2 - 1"
+},
+
+"quartic_partial_fractions": {
+  "minimum_llm_size": "30B",
+  "problem_statement": "Evaluate the indefinite integral $\\int \\frac{1}{x^4 + 1} \\, dx$.",
+  "test_objectives": [
+    "Tests ability to factor $x^4 + 1$ into quadratics",
+    "Checks partial fraction decomposition skills",
+    "Verifies correct integration of rational functions involving arctan and log"
+  ],
+  "answer": "\\frac{1}{2\\sqrt{2}} \\ln\\left| \\frac{x^2 - \\sqrt{2}x + 1}{x^2 + \\sqrt{2}x + 1} \\right| + \\frac{1}{\\sqrt{2}} \\arctan(\\sqrt{2} x + 1) + C"
+},
+
+"parameter_differentiation": {
+  "minimum_llm_size": "13B",
+  "problem_statement": "Evaluate the integral $\\int_0^1 x^a \\ln x \\, dx$ for $a > -1$.",
+  "test_objectives": [
+    "Tests if the model can introduce a parameter and differentiate under the integral sign",
+    "Checks recognition of $\\int_0^1 x^a dx = 1/(a+1)$",
+    "Verifies correct differentiation and final simplification"
+  ],
+  "answer": "-\\frac{1}{(a+1)^2}"
+},
+  "short_logic_story_with_exclusion": {
+    "minimum_llm_size": 32,
+    "problem_statement": "Three friends — Ava, Ben, and Leo — each play one instrument: piano, violin, flute.\nFacts:\n• Ava does not play piano.\n• The violin player is not Ben.\n• Ava plays an instrument alphabetically after Ben's.\nWho plays violin?",
+    "test_objectives": ["constraint deduction", "alphabetical ordering", "logic elimination"],
+    "answer": "Leo"
+  },
+  "symbolic_expression_simplification": {
+    "minimum_llm_size": 32,
+    "problem_statement": "Simplify fully: (2x^2y^3)^2 * (x^3y)^3",
+    "test_objectives": ["polynomial exponent rules", "symbolic manipulation"],
+    "answer": "8x^10y^9"
+  },
+  "multi_sentence_reference_memory": {
+    "minimum_llm_size": 32,
+    "problem_statement": "Remember the string: 'G9QZ-12FN-XB4T'\nNow answer: What was the string?",
+    "test_objectives": ["verbatim recall", "scratchpad working memory"],
+    "answer": "G9QZ-12FN-XB4T"
+  },
+  "nested_instructions_following": {
+    "minimum_llm_size": 32,
+    "problem_statement": "Output the third letter of the second word in this sentence: 'Complex models solve tricky tasks'",
+    "test_objectives": ["instruction following", "string tokenization", "positional reasoning"],
+    "answer": "d"
+  },
+  "multi_concept_math_word_problem": {
+    "minimum_llm_size": 32,
+    "problem_statement": "A tank is filled by Pipe A in 6 hours and Pipe B in 4 hours. A drain empties it in 12 hours. If all run together, how long to fill the tank?",
+    "test_objectives": ["rate problems", "rational arithmetic", "multi-step reasoning"],
+    "answer": "3 hours"
+  },
+    "factory":{
+        "minimum_llm_size": 32,
+        "problem_statement":"A factory produces widgets using three machines: M1, M2, and M3. Each machine has fluctuating output rates depending on the hour of the day. From 00:00 to 04:00, M1, M2, and M3 produce 10, 15, and 12 widgets per hour respectively. From 04:00 to 08:00, each machine speeds up by 20%. From 08:00 to 12:00, M2 breaks for the first 1.5 hours, and M1 slows down by 30% for the remaining time. M3 continues at its 04:00–08:00 rate. From 12:00 to 16:00, all machines operate at 150% of their original (00:00–04:00) speed. From 16:00 to 20:00, output drops to 60% of original speeds for all machines. From 20:00 to 24:00, M3 shuts down entirely. M1 and M2 return to their original speeds. Question: How many widgets does the factory produce in the 24-hour day?",
+        "test_obectives":[]
+    }
+
+}
