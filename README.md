@@ -1166,3 +1166,4 @@ Currently, it appears more personas creates a more robust model, it is assumed t
 
 Quite simply the API has a lot of work left to be done but it is usable. It requires things like error handling, logging, and more.
 
+https://www.linkedin.com/feed/update/urn:li:activity:7402987678192971776?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAwbm_YBXy7wdi9fVl1L2SH9EXpU9uHe8DA
